@@ -9,6 +9,10 @@ h1{
 body{
     background-color: aqua;
 }
+
+p{
+
+}
 .tbox{
    text-align: center;
 }
@@ -35,4 +39,7 @@ body{
     padding-left: 5px;
 }
 
-
+#dayOfTheWeek{
+    text-align: center;
+    font-family: arial, sans-serif;
+}
