@@ -1,4 +1,3 @@
-// ########## FONCTIONS ##########
 
 function getCoord(data) {
     const lat = data.results[0].geometry.lat
@@ -6,7 +5,6 @@ function getCoord(data) {
     return { lat, lon }
 }
 
-// THEME MODE FUNCTION
 function getTheme(uv) {
     if (uv == 0) {
         uviCheck = true
@@ -22,7 +20,6 @@ function getTheme(uv) {
     return uviCheck
 }
 
-// WEEK ARRAY AND CURRENT DAY FOR FUTUR CALCUL
 function getDayNumber(){
     const currentDate = new Date();
     const currentDay = currentDate.getDay()
@@ -32,15 +29,13 @@ function getDayNumber(){
     }   
 
 
-// ########## DEROULE LOGIQUE ###############
-
 document.addEventListener("DOMContentLoaded", function() {
     //--------------------------------------------
     
     const submitButton = document.getElementById("submit")
     
-    const API_KEY_loc = "9d4b2106584d4236b68d77703e0ec133"
-    const API_KEY_weather = "6c601f4c97c69803c3d0ea71c97c199e"
+    const API_KEY_loc = "78f0265465d04dbeb14f38246509912d"
+    const API_KEY_weather = "104bf1cd8898dd5511abb9ccefbc7b63"
     
     submitButton.addEventListener("click", (event) => {
         event.preventDefault();
