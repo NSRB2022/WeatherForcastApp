@@ -1,28 +1,34 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="./forcast.js"></script>
-    <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Weather Forcast App</title>
+    <title>Weather App</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./app.js"></script>
   </head>
-  <body>
-    <h1>Weather App</h1>
-<!-- Renseigner la ville -->
-    <div id="box2" class="tbox">
-      <div id="form_box">
-          <input class="tbox" id="addCity" type="text" placeholder="Add a city"/>
-          <button class="tbox" id="submitCity" type="submit">Submit</button>
+  <body id="body">
+      <h1>Weather App</h1>
+      <div class="container">
+        <form id="form">
+          <input
+            type="text" name="userLocation" id="userLocation" placeholder="Where are you?"/>
+          <select name="daySelection" id="day-select">
+            <option value="1">1 jour</option>
+            <option value="2">2 jours</option>
+            <option value="3">3 jours</option>
+            <option value="4">4 jours</option>
+            <option value="5">5 jours</option>
+            <option value="6">6 jours</option>
+            <option value="7">7 jours</option>
+          </select>
+          <input type="submit" name="submit" id="submit" placeholder="Submit" />
+        </form>
       </div>
-    </div>
-    <p id="dayOfTheWeek" class="topDay"></p>
-    <div id="icon" class="iconbox"></div>
-    <!-- <div id="content" class="regularList"> -->
-      <!-- <ol>
-        <li></li>
-      </ol> -->
-    <!-- </div> -->
+      <div id="formResult">
+      </div>
+
   </body>
 </html>
