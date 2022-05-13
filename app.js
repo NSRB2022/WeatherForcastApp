@@ -30,7 +30,6 @@ function getDayNumber(){
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    //--------------------------------------------
     
     const submitButton = document.getElementById("submit")
     
@@ -66,14 +65,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 else console.log(`Erreur lorsqu'on a tenté de récupérer les data Weather`);
             })
             .then(cityWeather => { 
-                // reset le tableau au debut
-                // ask for user input number of days to display
+                
                 const formDisplayResult = document.getElementById('formResult')                
                 formDisplayResult.innerHTML = []
                 const daysToDisplay = document.getElementById("day-select").value
 
                 for (let i= 0; i < daysToDisplay ; i++) {
-                   // Appel function getTheme et return uviCheck en True ou False
                    const dayValue = getDayNumber().week[getDayNumber().currentDay + i]
                    
                    const dayDiv = document.createElement('div')
@@ -126,5 +123,4 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(err=> console.log(err))
 
     });
-    //--------------------------------------------
 });
